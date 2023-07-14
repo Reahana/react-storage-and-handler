@@ -1,10 +1,11 @@
 import React from 'react';
 import './Cosmetic.css';
+import { addToDb } from '../../Utilities/Fakedb';
 
 const Cosmetic = (props) => {
     const {name, price, id} = props.cosmetic;
  const addToCart=(id) =>{
-    console.log('add',id);
+    addToDb(id)
  }
     return (
         <div className='product'>
